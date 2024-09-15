@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login And Sign Up Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div class="heading">
+               
+                <h1 onclick="login()" id="log">login</h1>
+                
+                <h1 onclick="signup()"  id="sign">sign up</h1>
+            </div>
+            <div class="loginform" >
+                <form action="" id="loginBox">
+                    <div class="inpBox">
+                        <input type="text" name="" id="" required>
+                        <label for="">Username</label>
+                    </div>
+                    <div class="inpBox">
+                        <input type="email" name="" id="" required>
+                        <label for="">email</label>
+                    </div>
+                    <div class="inpBox">
+                        <input type="password" name="" id="" required>
+                        <label for="">enter password</label>
+                    </div>
+                    <div class="inpBox">
+                        <input type="password" name="" id="" required>
+                        <label for="">re-enter password</label>
+                    </div>
+                    <div class="inpBox sub">
+                        <input type="submit" name="" id="" value="login">
+                    </div>
+                    <div class="para">
+                        <p>forgot password ? <a href="#">sign up</a></p>
+                    </div>
+                    <div class="socialIcon">
+                        <a href=""> <img src="svg/bxl-facebook-circle.svg" alt=""></a>
+                        <a href=""><img src="svg/bxl-instagram-alt.svg" alt=""></a>
+                        <a href=""><img src="svg/bxl-twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="signupForm" id="signupBox">
+                <div class="inpBox">
+                    <input type="text" required>
+                    <label for=""> email</label>
+                </div>
+                <div class="inpBox">
+                    <input type="text" required>
+                    <label for=""> password</label>
+                </div>
+                <div class="inpBox sub">
+                    <input type="submit" name="" id="" value="signup">
+                </div>
+                <div class="para">
+                   <p>
+                    forgot password ?
+                    <a href="#">
+                        login
+                    </a>
+                   </p>
+                </div>
+                <div class="socialIcon">
+                    <a href=""> <img src="svg/bxl-facebook-circle.svg" alt=""></a>
+                    <a href=""><img src="svg/bxl-instagram-alt.svg" alt=""></a>
+                    <a href=""><img src="svg/bxl-twitter.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+let a,b,l,s;
+a=document.getElementById("loginBox");
+b=document.getElementById("signupBox");
+l=document.getElementById("log");
+s=document.getElementById("sign");
+
+function login(){
+// alert("login");
+a.style.left = "0px";
+l.style.backgroundColor = "rgba(100,43,115,1)";
+s.style.backgroundColor = "#a39c8e62";
+b.style.left = "-100%";
+}
+
+function signup(){
+s.style.backgroundColor = "rgba(100,43,115,1)";
+l.style.backgroundColor = "#a39c8e62";
+a.style.left = "-100%"
+b.style.left = "0px";
+}
+</script>
+</body>
+
+</html>

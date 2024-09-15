@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.wrapper{
+width: 100vw;
+height: 100vh;
+background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
+display: flex;
+align-items: center;
+overflow: hidden;
+}
+
+.box{
+    width: 40%;
+    min-width: 400px;
+    min-height: 60%;
+    height: 70%;
+    background-color:#201820 ;
+    box-shadow: 0 0 25px #853799 ;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.heading{
+    min-height: 10%;
+    display: flex;
+    /* padding: 2rem 0 0 0; */
+    justify-content: space-around;
+    align-items: center;
+ 
+}
+
+.heading h1{
+    margin: 1.5rem 0 ;
+    padding: 1rem 0;
+    background-color: #a39c8e62;
+    width: 40%;
+    text-align: center;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+    transition: .5s all ease-in-out;
+}
+
+#log{
+    background-color: rgba(100,43,115,1);
+}
+
+.heading h1 label{
+    display: block;
+    /* background-color: orange; */
+    width: 100%;
+    /* height: 100%; */
+}
+
+.heading h1:hover{
+    background-color:#a39c8e62 ;
+    box-shadow: 0 0 20px #a39c8e28;
+    transform: scale(.9);
+}
+
+
+form {
+    position: absolute;
+    top: 69px;
+    display: flex;
+    gap: 1rem;
+    min-height: 60vh;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+   
+    /* left: 20%; */
+    transition: .2s all ease-in-out;
+
+}
+
+.inpBox{
+    /* border: 2px solid white; */
+    width: 80%;
+    margin: 1rem 0;
+    height: 5vh;
+    position: relative;
+}
+
+.inpBox input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    /* border: 5px solid rgb(255, 217, 0); */
+}
+
+
+
+.inpBox label{
+    position: absolute;
+    top: 2px;
+    left: 0;
+    cursor: text;
+    /* transform: translateY(-50%); */
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    transition: .2s all ease-in-out;
+}
+
+.sub{
+    width: 30%;
+}
+
+.inpBox input[type="submit"]{
+    border: none;
+    border-radius: 2rem;
+    background-color: #382f38;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    transition: .2s all ease-in-out;
+}
+
+.inpBox input[type="submit"]:hover{
+    background-color: #5a4e5ac7;
+    transform: scale(.9);
+}
+
+.inpBox input:focus ~ label,
+.inpBox input:valid ~ label{
+    top: -10px;
+    font-size: 1.2rem;
+    color: #df5fff;
+}
+
+
+.para{
+    width: 100%;
+    /* border: 2px solid white; */
+    text-align: center;
+}
+
+.para p{
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    text-transform: capitalize;
+}
+
+.para a{
+    color: #df5fff;
+    text-shadow: 0 0 8px #df5fff;
+    font-size: 2rem;
+    transition: .2s all ease-in-out;
+}
+
+.para a:hover{
+    color: white;
+}
+
+.socialIcon{
+    display: flex;
+    /* border: 2px solid white; */
+    justify-content: center;
+    gap: 1rem;
+}
+.socialIcon a{
+/* border: 2px solid white; */
+display: inline-block;
+width: 50px;
+}
+.socialIcon a img{
+    width: 100%;
+    transition: .6s all ease-in-out;
+}
+.socialIcon img:hover{
+   transform: rotate3d(0,1,0,180deg);
+}
+
+.signupForm{
+    /* border: 2px solid white; */
+    height: 85%;
+    width: 100%;
+    position: absolute;
+    top: 69px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transition: .2s all ease-in-out;
+    right: -100%;
+}
+
+.signupForm .inpBox{
+    /* margin: 3rem 0; */
+    width: 65%;
+}
+
+.signupForm .socialIcon a{
+    width: 50px;
+    display: inline-block;
+    /* border: 2px solid white; */
+}
+
+
+.signupForm .sub{
+    width: 30%;
+}
+
+@media  screen and (max-width  : 425px) {
+    html{
+        font-size: 9px;
+    }
+    .box{
+        min-width: 90%;
+    }
+    .heading h1{
+        font-size: 15px;
+    }
+
+    .para a{
+        font-size: 1.5rem;
+    }
+
+    .signupForm{
+        gap: 5rem;
+    }
+
+    .signupForm .inpBox{
+        width: 80%;
+    }
+
+    form{
+        gap: 2rem;
+    }
+
+    .sub{
+        width: 60%;
+    }
+   .socialIcon a{
+        width: 30px;
+    }
+}
